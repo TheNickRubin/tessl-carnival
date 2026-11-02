@@ -1,0 +1,7 @@
+{
+  "name": "rickrubin-ideafactory/evidence-review",
+  "version": "0.1.0",
+  "description": "Review whether completion claims are supported by the supplied evidence.",
+  "private": true,
+  "skills": ["skills/review-evidence"]
+}

@@ -1,0 +1,5 @@
+export const parse = text => {
+  const id = text.split("\n").find(line => line.startsWith("lesson-id="))?.slice(10);
+  if (!id) throw new Error("MISSING_ID");
+  return { id };
+};

@@ -1,0 +1,26 @@
+{
+  "context": "Assess the substance of review.md against the supplied packet. Equivalent wording is acceptable. Award for grounded reasoning, not particular headings or keywords. No execution of recorded commands is needed.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "revision_binding",
+      "description": "Identifies that unit-41 tested aaaa… while candidate.json selects bbbb… and records a behavior change afterward; cites both files/fields.",
+      "max_score": 4
+    },
+    {
+      "name": "scope_of_proof",
+      "description": "Credits the 18 passing tests for the older revision but treats current-candidate verification/readiness as incomplete or unsupported.",
+      "max_score": 3
+    },
+    {
+      "name": "minimal_resolution",
+      "description": "Requests the relevant suite on the selected candidate and a run record bound to that revision; does not propose an unrelated rewrite or require deployment.",
+      "max_score": 2
+    },
+    {
+      "name": "calibrated_conclusion",
+      "description": "Does not claim the new code is known broken, tests failed, or the author lied merely because current evidence is missing.",
+      "max_score": 1
+    }
+  ]
+}

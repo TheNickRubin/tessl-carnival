@@ -1,0 +1,8 @@
+{
+  "artifact": "museum-guide-v3.mp3",
+  "sha256": "f366de8c9d7b1a40cb4e5f4aa11edc220de772769f2ea18361b6ae4b70ffbb23",
+  "duration_seconds": 93,
+  "expected_duration_seconds": 93,
+  "decode_check": "pass",
+  "clipping_check": "pass"
+}

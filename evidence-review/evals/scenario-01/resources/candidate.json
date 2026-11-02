@@ -1,0 +1,11 @@
+{
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "changes": [
+    {
+      "path": "src/retry.js",
+      "kind": "behavior",
+      "description": "Changed exponential delay to capped linear delay after run unit-41."
+    }
+  ],
+  "selected_at": "2026-10-30T14:25:00Z"
+}

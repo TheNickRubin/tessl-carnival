@@ -1,0 +1,26 @@
+{
+  "context": "Assess the substance of review.md against the supplied packet. Equivalent wording is acceptable. Award for grounded reasoning, not particular headings or keywords. No execution of recorded commands is needed.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "unknown_outcome",
+      "description": "Rejects timeout-as-confirmed-failure: attempts.json shows the first request was sent and its remote outcome remains unknown.",
+      "max_score": 3
+    },
+    {
+      "name": "retry_identity",
+      "description": "Identifies the second submission used a different request key, bypassing the stated deduplication boundary, so exactly-one is not established.",
+      "max_score": 3
+    },
+    {
+      "name": "reconcile_first",
+      "description": "Recommends looking up/reconciling report-42-a and export-108, and holding further fresh submissions until the outcome is known.",
+      "max_score": 2
+    },
+    {
+      "name": "calibration",
+      "description": "Does not assert confirmed duplicate exports/charges or a guaranteed free failure; recognizes export-108 is queued, not completed.",
+      "max_score": 2
+    }
+  ]
+}

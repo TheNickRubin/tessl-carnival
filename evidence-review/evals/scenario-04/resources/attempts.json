@@ -1,0 +1,18 @@
+{
+  "logical_job": "report-42",
+  "attempts": [
+    {
+      "number": 1,
+      "request_key": "report-42-a",
+      "transport": "request_sent_then_response_timeout",
+      "remote_operation_id": null
+    },
+    {
+      "number": 2,
+      "request_key": "report-42-b",
+      "transport": "response_received",
+      "http_status": 202,
+      "remote_operation_id": "export-108"
+    }
+  ]
+}

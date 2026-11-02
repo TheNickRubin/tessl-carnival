@@ -1,0 +1,22 @@
+{
+  "run_id": "parse-22",
+  "commit": "cccccccccccccccccccccccccccccccccccccccc",
+  "command": "node parser-check.mjs",
+  "exit_code": 0,
+  "results": [
+    {
+      "case": "valid",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true
+    },
+    {
+      "case": "missing_id",
+      "expected": "MISSING_ID",
+      "observed": "MISSING_ID",
+      "passed": true
+    }
+  ],
+  "artifact_sha256": "6b98f644c8e5601b90bd329a76aefb7f700dcafa38847b96006ed617763449f0",
+  "parser_source_sha256": "3609a72f550ef68baa4b04cc9ab52f6fd6427235d7f68f3da94f713d93d57465"
+}

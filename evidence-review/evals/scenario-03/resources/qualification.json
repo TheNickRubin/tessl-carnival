@@ -1,0 +1,22 @@
+{
+  "status": "green",
+  "gate_revision": "gate-9",
+  "positive": {
+    "fixture": "valid-receipt.json",
+    "submitted": true,
+    "observed": "ACCEPT",
+    "passed": true
+  },
+  "negative": {
+    "fixture": "altered-receipt.json",
+    "submitted": false,
+    "status": "skipped",
+    "reason": "fixture file empty"
+  },
+  "summary": {
+    "executed": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 1
+  }
+}
