@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "request_key": "report-42-b",
+      "operation_id": "export-108",
+      "state": "queued"
+    }
+  ],
+  "lookup_for_report_42_a_performed": false,
+  "billing_checked": false
+}

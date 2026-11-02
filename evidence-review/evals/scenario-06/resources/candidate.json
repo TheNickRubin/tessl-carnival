@@ -1,0 +1,12 @@
+{
+  "commit": "dddddddddddddddddddddddddddddddddddddddd",
+  "parser_source_path": "parser-source.txt",
+  "artifact_path": "lesson.txt",
+  "changes_since_tested_commit": [
+    {
+      "path": "docs/terminology.md",
+      "kind": "documentation_only"
+    }
+  ],
+  "parser_source_sha256": "3609a72f550ef68baa4b04cc9ab52f6fd6427235d7f68f3da94f713d93d57465"
+}

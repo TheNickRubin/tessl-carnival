@@ -1,0 +1,2 @@
+release=ember-2
+mode=bounded

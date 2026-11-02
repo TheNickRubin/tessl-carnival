@@ -1,0 +1,26 @@
+{
+  "context": "Assess the substance of review.md against the supplied packet. Equivalent wording is acceptable. Award for grounded reasoning, not particular headings or keywords. No execution of recorded commands is needed.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "coverage_gap",
+      "description": "Finds that the required altered-receipt case was skipped, not submitted, and empty; cites qualification.json and the acceptance condition.",
+      "max_score": 4
+    },
+    {
+      "name": "positive_evidence",
+      "description": "Recognizes the valid-receipt acceptance succeeded while explaining that green/1-passed does not demonstrate rejection of altered receipts.",
+      "max_score": 3
+    },
+    {
+      "name": "resolution",
+      "description": "Asks to construct the intended altered-digest fixture, submit it to the same gate revision, and record the required rejection.",
+      "max_score": 2
+    },
+    {
+      "name": "no_unproved_bug",
+      "description": "Does not claim the gate is known to accept corrupt receipts or that all ordinary changes always require mutation testing.",
+      "max_score": 1
+    }
+  ]
+}

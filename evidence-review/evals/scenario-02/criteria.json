@@ -1,0 +1,26 @@
+{
+  "context": "Assess the substance of review.md against the supplied packet. Equivalent wording is acceptable. Award for grounded reasoning, not particular headings or keywords. No execution of recorded commands is needed.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "digest_verification",
+      "description": "Computes the release.txt SHA-256 as 415dc369aec7a85c3735527682df51cf7c743489f5b117a6b309f9af06fc6586, or equivalently demonstrates that it differs from receipt.json value 10597db43bb07a4e22b9b792c2cd0703c61b48cccefa42fe2105c1f6d6bd72ca. Uses the stated byte encoding.",
+      "max_score": 4
+    },
+    {
+      "name": "schema_vs_identity",
+      "description": "Explains that validation-log.json only validated receipt schema; artifact_digest_checked=false does not establish artifact identity, despite exit_code=0.",
+      "max_score": 3
+    },
+    {
+      "name": "proportionate_remedy",
+      "description": "Withholds the identity-complete claim and requests the correct reviewed artifact/receipt binding and revalidation; does not simply rewrite the receipt to bless unknown review provenance.",
+      "max_score": 2
+    },
+    {
+      "name": "no_intent_inference",
+      "description": "Does not infer malicious tampering or an unsafe release from the mismatch alone, and does not treat a matching digest as proof of review/approval.",
+      "max_score": 1
+    }
+  ]
+}

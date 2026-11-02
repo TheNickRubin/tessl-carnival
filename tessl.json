@@ -1,0 +1,8 @@
+{
+  "name": "rickrubin-ideafactory/tessl-carnival",
+  "mode": "vendored",
+  "agents": [
+    "tessl-agent"
+  ],
+  "dependencies": {}
+}

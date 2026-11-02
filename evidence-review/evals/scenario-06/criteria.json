@@ -1,0 +1,26 @@
+{
+  "context": "Assess the substance of review.md against the supplied packet. Equivalent wording is acceptable. Award for grounded reasoning, not particular headings or keywords. No execution of recorded commands is needed.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "supports_scope",
+      "description": "Concludes the stated local parser verification is supported, rather than blocking solely because deployment or human approval is absent.",
+      "max_score": 3
+    },
+    {
+      "name": "identity_checked",
+      "description": "Verifies or explicitly compares the matching artifact digest and parser source digest across candidate.json, run.json and actual files.",
+      "max_score": 3
+    },
+    {
+      "name": "relevant_revision",
+      "description": "Recognizes the commit differs only in unrelated documentation and the agreed unchanged parser/artifact hashes bind this scoped verification; does not falsely report stale executable evidence.",
+      "max_score": 2
+    },
+    {
+      "name": "coverage_and_limits",
+      "description": "Credits both positive and missing-id rejection checks and preserves the handoff limits on deployment/curriculum/human acceptance.",
+      "max_score": 2
+    }
+  ]
+}
