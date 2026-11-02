@@ -71,7 +71,7 @@ describe('water cannon', () => {
     expect(state.splashes[0].y).toBe(near.y);
   });
 
-  it('misses when the path passes beside the target', () => {
+  it('finds where a path first touches a target, and misses beside it', () => {
     expect(hitAlongPath({ x: 460, y: 300 }, { x: 460, y: 100 }, target)).toBeNull();
     expect(hitAlongPath({ x: 400, y: 300 }, { x: 400, y: 250 }, target)).toBeNull();
     expect(hitAlongPath({ x: 400, y: 300 }, { x: 400, y: 100 }, target)).toBeCloseTo(72 / 200);
