@@ -4,6 +4,7 @@ import {
   TANK_SIZE,
   createState,
   fire,
+  hitAlongPath,
   isHit,
   scoreForHit,
   step,
@@ -48,6 +49,32 @@ describe('water cannon', () => {
     expect(state.score).toBe(scoreForHit(target));
     expect(state.shots).toHaveLength(0);
     expect(state.targets[0].x).toBeLessThan(0);
+  });
+
+  it('scores a hit when a shot crosses a target in one step', () => {
+    const state = createState();
+    state.targets = [{ ...target }];
+    // Starts below the target and ends 100 px above it after one step.
+    state.shots = [{ x: target.x, y: target.y + 100, vx: 0, vy: -2000 }];
+    step(state, 0.1);
+    expect(state.score).toBe(scoreForHit(target));
+    expect(state.shots).toHaveLength(0);
+  });
+
+  it('soaks the first target along the path when a shot crosses two', () => {
+    const state = createState();
+    const near = { ...target, y: 300, speed: 60 };
+    const far = { ...target, y: 100, speed: 180 };
+    state.targets = [far, near].map((t) => ({ ...t, speed: 0 }));
+    state.shots = [{ x: target.x, y: 400, vx: 0, vy: -4000 }];
+    step(state, 0.1);
+    expect(state.splashes[0].y).toBe(near.y);
+  });
+
+  it('misses when the path passes beside the target', () => {
+    expect(hitAlongPath({ x: 460, y: 300 }, { x: 460, y: 100 }, target)).toBeNull();
+    expect(hitAlongPath({ x: 400, y: 300 }, { x: 400, y: 250 }, target)).toBeNull();
+    expect(hitAlongPath({ x: 400, y: 300 }, { x: 400, y: 100 }, target)).toBeCloseTo(72 / 200);
   });
 
   it('ends the game when the tank is empty and the last shot has landed', () => {
